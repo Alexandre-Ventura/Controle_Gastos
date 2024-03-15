@@ -52,5 +52,5 @@ const form = {
     loginButton: () => document.getElementById("login-button"),
     password: () => document.getElementById("password"),
     passwordRequiredError: () => document.getElementById("password-required-error"),
-    recoverPassword: () => document.getElementById("password-required-error")
+    recoverPassword: () => document.getElementById("recover-password-button")
 }

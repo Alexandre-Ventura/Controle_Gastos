@@ -20,16 +20,18 @@ input{
 }
 input, button{
     padding: 10px;
-    margin-bottom: 10px;
     width: -webkit-fill-available;
 }
 button{
     cursor: pointer;
-    margin-top: 5px;
+    margin-bottom: 10px;
 }
 button[disabled]{
     opacity: 0.4;
 }
 button:active{
     opacity: 0.4;
+}
+.form-field{
+    margin-bottom: 10px;
 }
