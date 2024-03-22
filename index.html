@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/global.css">
-    <title>Login - Controle de Gastos</title>
-</head>
-<body>
-    <form>
-        <div class="form-field">
-            <div class="label"><label>Informe seu Email</label></div>
-            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
-            <div class="error" id="email-required-error">Email é obrigatório!</div>
-            <div class="error" id="email-invalid-error">Email inválido!</div>
-        </div>
-        <div class="form-field">
-            <div class="label"><label>Informe sua Senha</label></div>
-            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
-            <div class="error" id="password-required-error">Senha é obrigatória!</div>
-        </div>
-        <div>
-            <button type="button" class="outline" onclick="register()">Registrar</button>
-        </div>
-        <div>
-            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
-        </div>
-        <div>
-            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar Senha</button>
-        </div>    
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/global.css">
+        <title>Login - Controle de Gastos</title>
+    </head>
+    <body class="centralize">
+        <form>
+            <div class="form-field">
+                <div class="label"><label>Informe seu Email</label></div>
+                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
+                <div class="error" id="email-required-error">Email é obrigatório!</div>
+                <div class="error" id="email-invalid-error">Email inválido!</div>
+            </div>
+            <div class="form-field">
+                <div class="label"><label>Informe sua Senha</label></div>
+                <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
+                <div class="error" id="password-required-error">Senha é obrigatória!</div>
+            </div>
+            <div>
+                <button type="button" class="outline" onclick="register()">Registrar</button>
+            </div>
+            <div>
+                <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+            </div>
+            <div>
+                <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar Senha</button>
+            </div>    
+        </form> 
+    </body>
+
     <script src="js/index.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/loading.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyBhrSooG1RZnWzTYO621dpaU4c7CNdkZJ8",
@@ -45,5 +50,4 @@
         };
         firebase.initializeApp(firebaseConfig);
     </script>
-</body>
 </html>
